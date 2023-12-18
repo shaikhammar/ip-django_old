@@ -5,7 +5,7 @@ tasks:
     init: |
       pip install mysqlclient
       mysql
-      create user 'ipadmin'@'localhost' indentified by 'ipadmin';
+      create user 'ipadmin'@'localhost' identified by 'ipadmin';
       grant all privileges on *.* to 'ipadmin'@'localhost' with grant option;
       flush privileges;
       exit
