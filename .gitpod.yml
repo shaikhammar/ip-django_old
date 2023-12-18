@@ -4,13 +4,13 @@ tasks:
   - name: MySQL Client install
     init: |
       pip install mysqlclient
+    command: |
       mysql
+      create database ip;
       create user 'ipadmin'@'localhost' identified by 'ipadmin';
       grant all privileges on *.* to 'ipadmin'@'localhost' with grant option;
       flush privileges;
       exit
-    command: |
-      
 
   - name: Django Project
     init: |
