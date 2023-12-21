@@ -141,8 +141,8 @@ if __import__('os').environ.get('GITPOD_WORKSPACE_URL'):
 # Setting custom user model to use email instead of username
 AUTH_USER_MODEL = "users.User"
 
-LOGIN_URL = "login"
+LOGIN_URL = ""
 LOGIN_REDIRECT_URL = "ip"
-LOGOUT_REDIRECT_URL = "login"
+LOGOUT_REDIRECT_URL = "./"
 
 CSRF_TRUSTED_ORIGINS = ["https://8000-shaikhammar-ipdjango-3xixp7wbb4c.ws-us107.gitpod.io"]

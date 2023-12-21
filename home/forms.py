@@ -1,5 +1,6 @@
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm, UsernameField
+from django.contrib.auth.forms import AuthenticationForm, UsernameField, UserCreationForm
+from users.models import User
 
 class LoginForm(AuthenticationForm):
     username = UsernameField(label='Email address', widget=forms.TextInput(attrs={'class':'form-control', 'type':'email'}))
@@ -11,3 +12,8 @@ class LoginForm(AuthenticationForm):
                 ("This account is not allowed here."),
                 code='not_allowed',
             )
+
+class SignupForm(UserCreationForm):
+    class Meta(UserCreationForm.Meta):
+        model = User
+        fields = ('email', 'password', 'first_name', 'last_name')
