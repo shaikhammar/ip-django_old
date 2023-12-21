@@ -38,10 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_htmx',
+    'crispy_forms',
+    'crispy_bootstrap5',
 
     'users.apps.UsersConfig',
     'home.apps.HomeConfig',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -146,3 +149,7 @@ LOGIN_REDIRECT_URL = "ip"
 LOGOUT_REDIRECT_URL = "./"
 
 CSRF_TRUSTED_ORIGINS = ["https://8000-shaikhammar-ipdjango-3xixp7wbb4c.ws-us107.gitpod.io"]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
